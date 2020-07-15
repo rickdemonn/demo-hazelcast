@@ -3,6 +3,8 @@ package com.example.demohazelcast.service;
 import com.example.demohazelcast.exception.BookNotFoundException;
 import com.example.demohazelcast.model.Book;
 import com.example.demohazelcast.repo.HazelCastRepo;
+import lombok.SneakyThrows;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,11 +17,17 @@ public class HazelCastService {
         this.hazelCastRepo = hazelCastRepo;
     }
 
+    @SneakyThrows
+    @Cacheable("books")
     public Book getOne(Integer id) {
+        Thread.sleep(2000);
         return hazelCastRepo.findById(id).orElseThrow(BookNotFoundException::new);
     }
 
+    @SneakyThrows
+    @Cacheable("books")
     public List<Book> findAll() {
+        Thread.sleep(2000);
         return hazelCastRepo.findAll();
     }
 
