@@ -16,7 +16,6 @@
 
     <properties>
         <java.version>11</java.version>
-        <hazlecast.version>4.0.2</hazlecast.version>
     </properties>
 
     <dependencies>
@@ -78,19 +77,11 @@
         <dependency>
             <groupId>com.hazelcast</groupId>
             <artifactId>hazelcast</artifactId>
-            <version>${hazlecast.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.hazelcast</groupId>
             <artifactId>hazelcast-spring</artifactId>
-            <version>${hazlecast.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.hazelcast</groupId>
-            <artifactId>hazelcast-all</artifactId>
-            <version>${hazlecast.version}</version>
         </dependency>
 
         <dependency>
