@@ -1,9 +1,0 @@
-hazelcast:
-  instance-name: demo-hazelcast
-  map:
-    default:
-      time-to-live-seconds: 10
-  network:
-    join:
-      multicast:
-        enabled: true
